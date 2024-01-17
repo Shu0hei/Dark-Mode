@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cuy University Sesi-6</title>
+  </head>
+  <body>
+    <!-- Div class container -->
+    <div class="container">
+      <!-- Navigation class navigation for Javascript -->
+      <nav id="navigation">
+        <!-- Link -->
+        <a onclick="reRender()" id="home">Home</a>
+        <a onclick="darkMode()" id="mode">Dark Mode</a>
+        <a onclick="indoMode()" id="indo">Indonesia Mode</a>
+        <a onclick="jandaMode()" id="janda">Janda Mode</a>
+      </nav>
+      <h1>Session 6 Cuy University</h1>
+      <p class="info" id="info"></p>
+    </div>
+
+    <!-- Initializing Function -->
+    <script>
+      let body = document.body;
+      let nav = document.getElementById("navigation");
+      let restart = document.getElementById("home");
+      let mode = document.getElementById("mode");
+      let indo = document.getElementById("indo");
+      let janda = document.getElementById("janda");
+      let info = document.getElementById("info");
+
+      const darkLimit = 6;
+      let darkCounter = 0;
+      let darkRemainingLeft;
+
+      // To restore it to normal
+      function reRender() {
+        if (darkCounter == darkLimit) {
+          location.reload();
+        }
+      }
+
+      // Function darkMode() for link "MODE"
+      function darkMode() {
+        darkRemainingLeft = darkLimit - darkCounter;
+        indo.style.display = "none";
+        janda.style.display = "none";
+
+        if (darkCounter == darkLimit) {
+          info.textContent = "Dark Mode quota has run out";
+          mode.style.display = "none";
+          restart.textContent = "Restart";
+          return;
+        }
+
+        if (darkCounter == 0) {
+          mode.textContent = "Light Mode";
+        } else if (darkCounter == 1) {
+          mode.textContent = "Dark Mode";
+        } else if (darkCounter == 2) {
+          mode.textContent = "Light Mode";
+        } else if (darkCounter == 3) {
+          mode.textContent = "Dark Mode";
+        } else if (darkCounter == 4) {
+          mode.textContent = "Light Mode";
+        } else if (darkCounter == 5) {
+          mode.textContent = "Dark Mode";
+        }
+
+        darkCounter += 1;
+
+        // Render to info element
+        info.textContent = `Used Dark Mode ${darkCounter}x, remaining ${darkRemainingLeft}x`;
+
+        // Dark Mode CSS
+        body.classList.toggle("darkBody");
+        nav.classList.toggle("darkNav");
+      }
+
+      function indoMode() {
+        darkRemainingLeft = darkLimit - darkCounter;
+        mode.style.display = "none";
+        janda.style.display = "none";
+
+        if (darkCounter == darkLimit) {
+          info.textContent = "Indonesia Mode quota has run out";
+          indo.style.display = "none";
+          restart.textContent = "Restart";
+          return;
+        }
+
+        if (darkCounter == 0) {
+          indo.textContent = "Light Mode";
+        } else if (darkCounter == 1) {
+          indo.textContent = "Indonesia Mode";
+        } else if (darkCounter == 2) {
+          indo.textContent = "Light Mode";
+        } else if (darkCounter == 3) {
+          indo.textContent = "Indonesia Mode";
+        } else if (darkCounter == 4) {
+          indo.textContent = "Light Mode";
+        } else if (darkCounter == 5) {
+          indo.textContent = "Indonesia Mode";
+        }
+
+        darkCounter += 1;
+
+        // Render to info element
+        info.textContent = `Used Indonesia Mode ${darkCounter}x, remaining ${darkRemainingLeft}x`;
+
+        // Dark Mode CSS
+        body.classList.toggle("indoBody");
+        nav.classList.toggle("indoNav");
+      }
+
+      function jandaMode() {
+        darkRemainingLeft = darkLimit - darkCounter;
+        mode.style.display = "none";
+        indo.style.display = "none";
+
+        if (darkCounter == darkLimit) {
+          info.textContent = "Janda Mode quota has run out";
+          janda.style.display = "none";
+          restart.textContent = "Restart";
+          return;
+        }
+
+        if (darkCounter == 0) {
+          janda.textContent = "Light Mode";
+        } else if (darkCounter == 1) {
+          janda.textContent = "Janda Mode";
+        } else if (darkCounter == 2) {
+          janda.textContent = "Light Mode";
+        } else if (darkCounter == 3) {
+          janda.textContent = "Janda Mode";
+        } else if (darkCounter == 4) {
+          janda.textContent = "Light Mode";
+        } else if (darkCounter == 5) {
+          janda.textContent = "Janda Mode";
+        }
+
+        darkCounter += 1;
+
+        // Render to info element
+        info.textContent = `Used Janda Mode ${darkCounter}x, remaining ${darkRemainingLeft}x`;
+
+        // Dark Mode CSS
+        body.classList.toggle("jandaBody");
+        nav.classList.toggle("jandaNav");
+      }
+    </script>
+  </body>
+</html>

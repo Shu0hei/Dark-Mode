@@ -1,0 +1,135 @@
+/* Clearing CSS */
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Clearing CSS done */
+
+/* Body */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* Body done */
+
+/* Body CSS in Javascript */
+.darkBody {
+  background-color: black;
+  color: white;
+}
+
+.indoBody {
+  background-color: red;
+  color: white;
+}
+
+.jandaBody {
+  background-color: purple;
+  color: pink;
+}
+/* Body CSS in Javascript done */
+
+/* Div Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+/* Div Container done */
+
+/* Navigation */
+nav {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  padding: 13px;
+}
+
+/* Navigation CSS in Javascript */
+.darkNav,
+.darkNav a {
+  background-color: white;
+  color: black;
+}
+
+.darkNav a:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.indoNav,
+.indoNav a {
+  background-color: white;
+  color: red;
+}
+
+.indoNav a:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.jandaNav,
+.jandaNav a {
+  background-color: pink;
+  color: purple;
+}
+
+.jandaNav a:hover {
+  background-color: purple;
+  color: pink;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* Navigation CSS in Javascript done */
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 13px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+/* Navigation done */
+
+/* Info CSS */
+.info {
+  position: absolute;
+  top: 8%;
+  font-size: 15px;
+  font-weight: 500;
+  animation: jedagJedug 1s infinite;
+}
+/* Info CSS done */
+
+/* Keyframes for body */
+@keyframes jedagJedug {
+  0% {
+    color: black;
+    font-size: 15px;
+  }
+  50% {
+    color: white;
+    font-size: 16px;
+  }
+  100% {
+    color: black;
+    font-size: 15px;
+  }
+}
+/* Keyframes for body done*/
